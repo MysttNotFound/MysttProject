@@ -1,1 +1,1 @@
-Enter first number: Enter second number: Sum = 15
+Enter first number: 
