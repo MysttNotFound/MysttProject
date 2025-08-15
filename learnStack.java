@@ -23,6 +23,6 @@ public class learnStack {
         list.add(2);
 
         System.out.println(list);
-    }
+     }
     
 }
