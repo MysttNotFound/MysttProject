@@ -1,0 +1,2 @@
+c = 'g'
+print("The ASCII code of " + c  + " is", ord(c))
