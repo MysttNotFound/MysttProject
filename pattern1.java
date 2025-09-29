@@ -5,7 +5,7 @@ public class pattern1 {
             for (int j = 0; j < n; j++) {
                 System.out.print("*");
             }
-            System.out.println();  // ← isko inner loop ke baad rakhna hai!
+            System.out.println(); 
         }
     }
 }
