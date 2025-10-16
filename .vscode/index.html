@@ -1,89 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-    .container {
-      background: #fff;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      text-align: center;
-      width: 300px;
-    }
-    input {
-      width: 80%;
-      padding: 10px;
-      margin-bottom: 10px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    button {
-      padding: 10px 15px;
-      background: #4facfe;
-      border: none;
-      border-radius: 8px;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #00c6ff;
-    }
-    .result {
-      margin-top: 20px;
-      font-size: 16px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
 </head>
 <body>
-  <div class="container">
-    <h2>Weather App</h2>
-    <input type="text" id="city" placeholder="Enter city name">
-    <button onclick="getWeather()">Get Weather</button>
-    <div class="result" id="result"></div>
-  </div>
+    <!--this is an intro code-->
+    <h1> Welcome to irctc </h1>
+    <h2> Welcome to irctc </h2>
+    <h3> Welcome to irctc </h3>
+    <h4> Welcome to irctc </h4>
+    <h5> Welcome to irctc </h5>
+    <h6> Welcome to irctc </h6>
+    <hr>
+    <p>Lorem <b>ipsum dolor sit amet consectetur adipisicing elit.</b> <i>Adipisci blanditiis porro eligendi sit impedit quaerat ipsum beatae et! Dignissimos minima adipisci, pariatur voluptatem dolorum facilis molestias, debitis praesentium esse suscipit odit autem inventore nam sed, labore sit tempore totam nesciunt illo ex tempora ipsam possimus aliquam eligendi. Obcaecati error impedit,</i> similique cum quos excepturi est tenetur totam illum explicabo fuga vero soluta distinctio illo, doloremque autem, corrupti assumenda aperiam nisi repudiandae. Sapiente praesentium quam mollitia expedita corporis sequi libero obcaecati dolore alias earum qui laudantium ullam molestiae eum repellendus, vero reiciendis rerum pariatur molestias ipsam tempora unde hic nulla quos. ipsum dolor sit, amet consectetur adipisicing elit. Repellat quo quae vitae voluptatum? Enim officia, assumenda earum mollitia, quibusdam tenetur iste ipsa necessitatibus, ducimus iure natus laudantium aliquid nam repellat?</p>
+</hr>
+<hr>
+<h3>Shopping List</h3>
+<ol>
+    <ol type="I">
+    <li>Milk</li>
+    <li>food</li>
+    <li>cream</li>
+    <ul>
+        <li>full cream</li>
+        <li>half cream</li>
+    </ul>
+    <li>fruits</li>
+</ol>
 
-  <script>
-    const apiKey = "9f5317de99fd6576c3e428191fba3b74"; // replace with your key
 
-    async function getWeather() {
-      const city = document.getElementById("city").value.trim();
-      if (!city) {
-        alert("Please enter a city name");
-        return;
-      }
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-      try {
-        const response = await fetch(url);
-        if (!response.ok) throw new Error("City not found");
-        const data = await response.json();
-
-        const weather = data.weather[0].description;
-        const temp = data.main.temp;
-        const humidity = data.main.humidity;
-
-        document.getElementById("result").innerHTML = `
-          <p><strong>${data.name}</strong></p>
-          <p>🌡 Temperature: ${temp} °C</p>
-          <p>💧 Humidity: ${humidity}%</p>
-          <p>☁️ Weather: ${weather}</p>
-        `;
-      } catch (error) {
-        document.getElementById("result").innerHTML = `<p style="color:red">${error.message}</p>`;
-      }
-    }
-  </script>
+    
 </body>
 </html>
